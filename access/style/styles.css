@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ html {
+    scroll-behavior: smooth;
+ }
+
+:root {
+    --main-black: #0d0b0bf5;
+    --main-blue-nav: #5bd9ec;
+    --main-blue-hover: #75e6ee;
+    --main-gray: #55595e;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+nav#var-bar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: flex-end;
+    background-color: var(--main-blue-nav);
+    position: fixed;
+    border-bottom-style: inset;
+    border-bottom-color: rgb(167, 225, 248);
+}
+
+ul.nav.list {
+    display: flex;
+    height: 100%;
+}
+
+@media (max-width: 800px) {
+    .link {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 360px) {
+    ul.nav.list {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .link {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 250px) {
+    ul.nav.list {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .link {
+        font-size: 50%;
+        text-align: center;
+    }
+}
+
+li.nav.son {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    width: 120px;
+    align-items: center;
+    padding: 5px 1.5rem;
+}
+
+@media (max-width: 360px) {
+    li.nav.son {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+li.nav.son:hover {
+    background-color: var(--main-blue-hover);
+}
+
+.link {
+    display: flex;
+    text-decoration: none;
+    color: var(--main-black);
+    width: 100%;
+    justify-content: center;
+    padding-right: 5px;
+}
+
+li.nav.son:hover .link{
+    color: var(--main-gray);
+    font-weight: bold;
+}
+
+div#contents {
+    background-color: #989c97;
+}
+div#who-i-am {
+    width: 100%;
+    height: 720px;
+    background: linear-gradient(var(--main-blue-nav), var(--main-blue-hover), #b5aeae);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:  60px;
+    margin-bottom: 75px;
+}
+
+h1#me {
+    font-size: 5rem;
+}
+
+p#work {
+    font-size: 3rem;
+    font-style: italic;
+    color: var(--main-gray);
+}
+
+h1#me, p#work {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width:800px) {
+    h1#me {
+        font-size: 4rem;
+    }
+
+    p#work {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:360px) {
+    h1#me {
+        font-size: 3rem;
+    }
+
+    p#work {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:250px) {
+    h1#me {
+        font-size: 2rem;
+    }
+
+    p#work {
+        font-size: 1rem;
+    }
+}
+
+div#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#b5aeae, #233f41);
+    padding-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    border-bottom-style: groove;
+    border-bottom-width: thin;
+    margin-bottom: 50px;
+    padding-top: 25px;
+}
+
+@media (max-width: 800px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    h2 {
+        font-size: 1.5rem
+    }
+}
+
+@media (max-width: 375px) {
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 250px) {
+    h2 {
+        font-size: 0.75rem;
+    }
+}
+
+div#project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+    grid-gap: 1rem 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 30.625em) {
+    div#project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project.project-title {
+    text-decoration: none;
+    text-align: center;
+    margin: 5px 20px;
+    background-color: #d6c3c3;
+    border-style: double;
+}
+
+img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+p.project-title {
+    display: flex;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+p.project-title:hover {
+    color: #bd38c3;
+}
+
+@media (max-width: 800px) {
+    p.project-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 630px) {
+    p.project-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    p.project-title {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 250px) {
+    p.project-title {
+        font-size: 0.5rem;
+    }
+}
+
+a.btn.btn-show-all {
+    height: 50px;
+    width: 175px;
+    background-color: #cda8d1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    color: black;
+}
+
+a.btn.btn-show-all:hover {
+    background-color: aliceblue;
+}
+
+i.fas.fa-chevron-right {
+    margin-left: 10px;
+    color: black;
+}
+
+@media (max-width: 400px) {
+    a.btn.btn-show-all {
+        height: 25px;
+        width: 85px;
+        font-size: 0.75rem;
+    }
+}
+
+div#contact {
+    background-color: #303841;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    color: #fff;
+    border-bottom-style: groove;
+    border-bottom-color: red;
+    border-bottom-width: 5px;
+}
+
+div#contact-header {
+    margin-bottom: 35px;
+}
+
+h3, #how-contact {
+    text-align: center;
+    margin: 10px 0;
+}
+
+p#how-contact {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.btn.contact-details {
+    display: inline-block;
+    padding: 1rem 1rem;
+    border-radius: 2px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-details {
+    transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+    transform: translateY(8px);
+}
+
+@media (max-width: 500px) {
+    div#contact-header {
+        margin-top: 100px;
+    }
+
+    .contact-links {
+        font-size: 1rem;
+        margin: 50px 0;
+    }
+}
+
+
+@media (max-width: 250px) {
+    .contact-links {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    div#contact-header {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    p#how-contact {
+        font-size: 1rem;
+    }
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #303841;
+    color: #fff;
+    justify-content: flex-end;
+    font-size: 1rem;
+    padding: 20px 10px 20px;
+}
+
+a.footer-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 930px) {
+    #footer {
+        align-items: center;
+        text-align: center;
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 300px) {
+    #footer {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 250px) {
+    #footer {
+        font-size: 0.5rem;
+    }
+}
